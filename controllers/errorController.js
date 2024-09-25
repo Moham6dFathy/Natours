@@ -2,7 +2,7 @@ let AppError = require('./../utils/appError');
 
 const handleDuplicateField = (err) => {
   const value = err.message.match(/"(.*?)"/)[0];
-  console.log(value);
+  // console.log(value);
   const message = `Duplicated field value: ${value}. please use another value!`;
   return new AppError(message, 400);
 };

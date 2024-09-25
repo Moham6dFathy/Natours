@@ -98,7 +98,7 @@ exports.deleteMe = catchAsync(async (req, res, next) => {
 exports.createUser = async (req, res) => {
   try {
     const user = await User.create(req.body);
-    console.log(user);
+    // console.log(user);
     res.status(201).json({
       status: 'Success',
       data: {

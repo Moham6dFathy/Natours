@@ -157,10 +157,10 @@ tourSchema.pre('save', function (next) {
 // })
 
 // DOCUMENT MIDDLEWARE: run after .save and .create
-tourSchema.post('save', function (doc, next) {
-  console.log(doc);
-  next();
-});
+// tourSchema.post('save', function (doc, next) {
+//   console.log(doc);
+//   next();
+// });
 
 //QUERY MIDDLEWARE
 // tourSchema.pre('find', function (next) {
@@ -179,12 +179,12 @@ tourSchema.pre(/^find/, function (next) {
   next();
 });
 
-tourSchema.post(/^find/, function (docs, next) {
-  console.log(
-    `Query Middleware is executed in ${Date.now() - this.start} millesecond`,
-  );
-  next();
-});
+// tourSchema.post(/^find/, function (docs, next) {
+//   console.log(
+//     `Query Middleware is executed in ${Date.now() - this.start} millesecond`,
+//   );
+//   next();
+// });
 
 // AGGREGATION MIDDLEWARE
 // tourSchema.pre('aggregate', function (next) {
