@@ -21,7 +21,7 @@ const bookingSchema = new mongoose.Schema({
   },
   startDateOfTour: {
     type: Date,
-    required: [true, 'You must belong to start date of tour!'],
+    default: Date.now() + 10000000,
   },
   paid: {
     type: Boolean,
