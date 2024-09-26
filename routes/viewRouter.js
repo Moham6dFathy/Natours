@@ -8,14 +8,14 @@ const router = express.Router();
 
 router.get(
   '/',
-  bookingController.createBookingCheckout,
+  // bookingController.createBookingCheckout,
   authController.loggedIn,
   viewController.getOverview,
 );
 router.get('/tour/:slug', authController.loggedIn, viewController.getTour);
 router.get('/login', authController.loggedIn, viewController.login);
 router.get('/me', authController.protect, viewController.getAccount);
-router.get('/my-tours',authController.protect,viewController.getMyTours)
+router.get('/my-tours', authController.protect, viewController.getMyTours);
 
 router.post(
   '/submit-user-data',
