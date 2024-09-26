@@ -13,7 +13,7 @@ html(lang='en')
 
 
 
-    body 
+    body(data-alert = `${alert ? alert : ''}`)
         include _header
         
         block content 
